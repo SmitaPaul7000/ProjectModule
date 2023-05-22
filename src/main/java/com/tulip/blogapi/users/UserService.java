@@ -1,5 +1,6 @@
 package com.tulip.blogapi.users;
 
+import com.tulip.blogapi.security.jwt.JWTService;
 import com.tulip.blogapi.users.dto.CreateUserDTO;
 import com.tulip.blogapi.users.dto.LoginUserDTO;
 import com.tulip.blogapi.users.dto.UserReponseDTO;
@@ -15,16 +16,28 @@ public class UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
-    public UserService(
-            @Autowired UserRepository userRepository,
-            @Autowired ModelMapper modelMapper,
-            @Autowired PasswordEncoder passwordEncoder
-            )
-    {
+    private final JWTService jwtService;
+
+    public UserService(UserRepository userRepository, ModelMapper modelMapper,
+                       PasswordEncoder passwordEncoder, JWTService jwtService) {
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
         this.passwordEncoder = passwordEncoder;
+        this.jwtService = jwtService;
     }
+
+
+//    public UserService(
+//            @Autowired UserRepository userRepository,
+//            @Autowired ModelMapper modelMapper,
+//            @Autowired PasswordEncoder passwordEncoder
+//            )
+//    {
+//        this.userRepository = userRepository;
+//        this.modelMapper = modelMapper;
+//        this.passwordEncoder = passwordEncoder;
+//        this.jwtService = jwtService;
+//    }
 
     public UserReponseDTO createUser(CreateUserDTO createUserDTO)
     {
@@ -37,6 +50,7 @@ public class UserService {
         newUserEntity.setPassword(passwordEncoder.encode(createUserDTO.getPassword()));
         var savedUser = userRepository.save(newUserEntity);
         var userResponseDTO = modelMapper.map(savedUser, UserReponseDTO.class);
+        userResponseDTO.setToken(jwtService.createJWT(savedUser.getId()));
         return userResponseDTO;
 
     }

@@ -1,5 +1,6 @@
 package com.tulip.blogapi.users;
 
+import com.tulip.blogapi.security.jwt.JWTService;
 import com.tulip.blogapi.users.dto.CreateUserDTO;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
@@ -20,10 +21,12 @@ public class UsersServiceTests {
         if (usersService == null) {
             var modelMapper = new ModelMapper();
             var passwordEncoder = new BCryptPasswordEncoder();
+            var jwtService = new JWTService();
             usersService = new UserService(
                     usersRepository,
                     modelMapper,
-                    passwordEncoder
+                    passwordEncoder,
+                    jwtService
             );
         }
         return usersService;
