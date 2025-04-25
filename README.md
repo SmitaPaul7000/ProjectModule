@@ -1,5 +1,8 @@
 # ProjectModule
-src/main/resources/application.yml
+[src/main/resources/application.yml
+
+https://www.linkedin.com/jobs/view/3992734696/?alternateChannel=search&refId=NAmeu0IRR5n6SwYRcgF8KQ%3D%3D&trackingId=Jxmj0evUJadEud3hFVwROg%3D%3D&trk=d_flagship3_job_details
+
 About the job
 The Data Science Lead Analyst is a strategic professional who stays abreast of developments within own field and contributes to directional strategy by considering their application in own job and the business. Recognized technical authority for an area within the business. Requires basic commercial awareness. There are typically multiple people within the business that provide the same level of subject matter expertise. Developed communication and diplomacy skills are required in order to guide, influence and convince others, in particular colleagues in other areas and occasional external customers. Significant impact on the area through complex deliverables. Provides advice and counsel related to the technology or operations of the business. Work impacts an entire area, which eventually affects the overall performance and effectiveness of the sub-function/job family.
 
@@ -19,7 +22,7 @@ Formulates and defines systems scope and goals for complex projects through rese
 Impacts the business directly by ensuring the quality of work provided by self and others; impacts own team and closely related work teams.
 Considers the business implications of the application of technology to the current business environment; identifies and communicates risks and impacts.
 Drives communication between business leaders and IT; exhibits sound and comprehensive communication and diplomacy skills to exchange complex information.
-Conduct workflow analysis, business process modeling; develop use cases, test plans, and business rules; assist in user acceptance testing.
+Conduct workflow analysis, business process modeling; devel](https://www.linkedin.com/jobs/view/3992734696/?alternateChannel=search&refId=NAmeu0IRR5n6SwYRcgF8KQ%3D%3D&trackingId=Jxmj0evUJadEud3hFVwROg%3D%3D&trk=d_flagship3_job_details)op use cases, test plans, and business rules; assist in user acceptance testing.
 Collaborate on design and implementation of workflow solutions that provide long term scalability, reliability, and performance, and integration with reporting.
 
 Qualifications:
